@@ -1,0 +1,20 @@
+---
+export interface Props {
+	anime: string;
+	character: string;
+	quote: string;
+}
+
+const { anime, character, quote } = Astro.props;
+
+---
+
+<div class="card bg-base-100 shadow-xl pt-5 flex gap-[10px]">
+	<div class="card-body">
+		<h2 class="card-title text-2xl justify-center">{anime}</h2>
+		<p class="max-w-screen-lg italic text-lg">"{quote}"</p>
+		<div class="card-actions justify-end">
+			<h1 class="text-xl">{character}</h1>
+		</div>
+	</div>
+</div>
