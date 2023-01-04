@@ -2,13 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 
-
+const getData = await fetch("https://animechan.vercel.app/api/random")
+const data = await getData.json()
 ---
-
-<script>
-	const getData = await fetch("https://animechan.vercel.app/api/random")
-	const data = await getData.json()
-</script>
 
 <Layout title="Anime Quote Generator">
 	<main class="flex flex-col h-screen items-center p-5 justify-center max-sm:h-4/5">
@@ -17,7 +13,7 @@ import Card from '../components/Card.astro';
 		</Card>
 		<div class="mt-[-20px] z-40">
 			<button class="rounded-full bg-primary p-3">
-				<img src="/icon-dice.svg" alt="" onclick="data" />
+				<img src="/icon-dice.svg" />
 			</button>
 		</div>
 	</main>
